@@ -22,9 +22,33 @@ body {
     width: 100%;
     height: 100vh;
     color: $whitecolor;
+    
+}
+
+.container {
+    width: 483px;
+    height: 900px;
     background-color: $deepviletcolor;
 }
 
 .card-front {
-    @include flexCenter(center, column);
+    @include flexCenter(center, row);
+    img {
+        position: absolute;
+    }
+    span {
+        position: relative;
+    }
+}
+
+.card-back {
+    @include flexCenter(center, row);
+    img {
+        position: absolute;
+
+    }
+    span {
+        position: relative;
+    }
+
 }
