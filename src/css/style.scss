@@ -16,9 +16,7 @@
 
 }
 
-body {
-    @include flexCenter(center, column);
-
+body {  
     width: 100%;
     height: 100vh;
     color: $whitecolor;
@@ -26,9 +24,22 @@ body {
 }
 
 .container {
-    width: 483px;
-    height: 900px;
+    @include flexCenter(space-between, column);
+    width: 100%;
+    height: 100%;
+
+}
+
+.purple {
     background-color: $deepviletcolor;
+    width: 25vw;
+    height: 100vh;
+}
+
+.white {
+    background-color: $whitecolor;
+    width: 75vw;
+    height: 100vh;
 }
 
 .card-front {
