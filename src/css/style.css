@@ -45,7 +45,6 @@ body {
   flex-direction: column;
   width: 25vw;
   height: 100vh;
-  background-color: #47A2FF;
 }
 .white .form label {
   height: 5vh;
@@ -55,11 +54,29 @@ body {
   height: 5vh;
   border-radius: 10px;
 }
+.white .form .number {
+  width: 100%;
+}
+.white .form .number input {
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
+.white .form .name {
+  width: 100%;
+}
+.white .form .name input {
+  margin-bottom: 5%;
+  margin-top: 2%;
+}
 .white .form .card {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 5%;
+}
+.white .form .card input {
+  width: 100%;
 }
 .white .form .card .expire {
   display: flex;
@@ -72,12 +89,20 @@ body {
   justify-content: start;
   align-items: end;
   flex-direction: row;
+  margin-top: -10%;
+  width: 95%;
+  gap: 5%;
 }
 .white .form .card .cvc {
   display: flex;
   justify-content: end;
   align-items: start;
   flex-direction: column;
+  width: 90%;
+}
+.white .form .card .cvc input {
+  margin-top: -8%;
+  gap: 5%;
 }
 
 .card-front {
@@ -85,13 +110,16 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  display: none;
 }
 .card-front img {
   position: absolute;
+  top: 25%;
+  right: 60%;
 }
 .card-front span {
-  position: relative;
+  position: absolute;
+  top: 35%;
+  right: 65%;
 }
 
 .card-back {
@@ -99,11 +127,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  display: none;
 }
 .card-back img {
   position: absolute;
+  top: 55%;
+  right: 55%;
 }
 .card-back span {
-  position: relative;
+  position: absolute;
+  top: 67%;
+  right: 58%;
 }/*# sourceMappingURL=style.css.map */

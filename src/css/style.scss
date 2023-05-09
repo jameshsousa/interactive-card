@@ -8,7 +8,6 @@
 }
 
 
-
 * {
     padding: 0;
     margin: 0;
@@ -42,11 +41,12 @@ body {
     background-color: $whitecolor;
     width: 65vw;
     height: 100vh;
+    
     .form {
         @include flexCenter(center, column, start);
         width: 25vw;        
         height: 100vh;
-        background-color: $lightbluecolor;
+
         label {
             height: 5vh;
         }
@@ -56,19 +56,51 @@ body {
             border-radius: 10px;
         }
 
+        .number {           
+            width: 100%;
+            input {
+                margin-bottom: 5%;
+                margin-top: 2%;
+            }
+        
+        }
+
+        .name {            
+            width: 100%;
+            input {
+                margin-bottom: 5%;
+                margin-top: 2%;
+            }
+        }
+
         .card {
             @include flexCenter(start, row, center);
+            margin-bottom: 5%;                          
+
+            input {                
+                width: 100%;                
+            }
 
             .expire {
-                @include flexCenter(center, column, start);
+                @include flexCenter(center, column, start);                             
+                               
                 .month-year {
                     @include flexCenter(start, row, end);
+                    margin-top: -10%;
+                    width: 95%;
+                    gap: 5%;
                 }
 
             }
             .cvc {
-                @include flexCenter(end, column, start);
-            }
+                @include flexCenter(end, column, start);                
+                width: 90%; 
+                input {
+                    margin-top: -8%;                    
+                    gap: 5%;
+                }
+                           
+            } 
         }
 
         
@@ -78,23 +110,32 @@ body {
 .card-front {
     @include flexCenter(center, row, center);
     img {
-        position: absolute;
+        position:absolute;
+        top: 25%;
+        right: 60%;
     }
     span {
-        position: relative;
+        position:absolute;
+        top: 35%;
+        right: 65%;
     }
-    display: none;    
+        
 }
 
 .card-back {
     @include flexCenter(center, row, center);
     img {
-        position: absolute;
+        position:absolute;
+        top: 55%;
+        right: 55%;
 
     }
     span {
-        position: relative;
+        position:absolute;
+        top: 67%;
+        right: 58%;
+
     }
-    display: none;
+    
 }
 
