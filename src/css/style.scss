@@ -53,8 +53,22 @@ body {
         input {
             width: 100%;
             height: 5vh;
-            border-radius: 10px;         
-            
+            border-radius: 10px;
+        }
+
+        .card {
+            @include flexCenter(start, row, center);
+
+            .expire {
+                @include flexCenter(center, column, start);
+                .month-year {
+                    @include flexCenter(start, row, end);
+                }
+
+            }
+            .cvc {
+                @include flexCenter(end, column, start);
+            }
         }
 
         

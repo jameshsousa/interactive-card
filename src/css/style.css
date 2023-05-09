@@ -55,6 +55,30 @@ body {
   height: 5vh;
   border-radius: 10px;
 }
+.white .form .card {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+}
+.white .form .card .expire {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+}
+.white .form .card .expire .month-year {
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  flex-direction: row;
+}
+.white .form .card .cvc {
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  flex-direction: column;
+}
 
 .card-front {
   display: flex;
