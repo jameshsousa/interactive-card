@@ -110,16 +110,38 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-}
-.card-front img {
+  width: 447px;
+  height: 245px;
+  background-color: gray;
+  opacity: 0.2;
   position: absolute;
   top: 25%;
   right: 60%;
 }
-.card-front span {
+
+.front-content {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  flex-direction: column;
   position: absolute;
-  top: 35%;
-  right: 65%;
+  top: 25%;
+  right: 60%;
+  background-color: gray;
+  width: 372px;
+  height: 225px;
+}
+.front-content .card-number {
+  font-size: 28px;
+  color: white;
+}
+.front-content .card-name {
+  font-size: 14px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
 }
 
 .card-back {

@@ -109,17 +109,44 @@ body {
 
 .card-front {
     @include flexCenter(center, row, center);
-    img {
-        position:absolute;
-        top: 25%;
-        right: 60%;
-    }
-    span {
-        position:absolute;
-        top: 35%;
-        right: 65%;
-    }
+    width: 447px;
+    height: 245px;
+    background-color: gray;
+    opacity: 0.2;
+    position:absolute;
+    top: 25%;
+    right: 60%;
+
+ //   img {
+ //       position:absolute;
+ //       top: 25%;
+ //       right: 60%;
+//    }
         
+}
+
+.front-content {
+    @include flexCenter(end, column, center);
+    position:absolute;
+    top: 25%;
+    right: 60%;
+    background-color: gray;
+    width: 372px;
+    height: 225px;
+    
+
+    .card-number {
+        font-size: 28px;
+        color: white;        
+    }
+
+    .card-name {
+        font-size: 14px;
+        color: #FFFFFF;
+        @include flexCenter(space-between, row, center);
+    }
+
+
 }
 
 .card-back {
