@@ -1,11 +1,30 @@
 "use strict";
 const submit = document.getElementById("submit");
-const namesCard = document.getElementById("name-card").value;
-const number = document.getElementById("number").value;
 const month = document.getElementById("month").value;
 const year = document.getElementById("year").value;
 const cvc = document.getElementById("cvc").value;
-submit === null || submit === void 0 ? void 0 : submit.addEventListener('input', () => {
+const nameCard = document.getElementById("name-card");
+nameCard.addEventListener('input', () => {
     const namesCard = document.getElementById("name-card").value;
-    alert(namesCard);
+    document.getElementById("cardName").innerText = namesCard;
+});
+const number = document.getElementById("number");
+number.addEventListener('input', () => {
+    const number = document.getElementById("number").value;
+    document.getElementById("cardNumber").innerText = number;
+});
+const months = document.getElementById("month");
+months.addEventListener('input', () => {
+    const number = document.getElementById("month").value;
+    document.getElementById("monthcard").innerText = number;
+});
+const years = document.getElementById("year");
+years.addEventListener('input', () => {
+    const number = document.getElementById("year").value;
+    document.getElementById("yearcard").innerText = number;
+});
+const cvcs = document.getElementById("cvc");
+cvcs.addEventListener('input', () => {
+    const number = document.getElementById("cvc").value;
+    document.getElementById("cvcCard").innerText = number;
 });

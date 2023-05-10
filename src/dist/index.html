@@ -6,6 +6,9 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100&family=Montserrat:wght@100&family=Space+Grotesk:wght@500&family=Space+Mono&display=swap" rel="stylesheet">
   
   <title>Frontend Mentor | Interactive card details form</title>
 
@@ -24,17 +27,17 @@
       <div class="card-front">
         <img src="../images/bg-card-front.png">
         <div class="front-content">
-          <span class="card-number">0000 0000 0000 0000</span>
+          <span id = "cardNumber" class="card-number">0000 0000 0000 0000</span>
           <div class ="card-name">
-          <span >Jane Appleseed</span>
-          <span>00/00</span>
+              <p id="cardName" >Jane Appleseed</p>
+              <span><span id="monthcard">00</span><span>/<span id="yearcard">00</span></span>
           </div>
         </div>
       </div>
   
       <div class="card-back">
         <img src="../images/bg-card-back.png">
-        <span>000</span>
+        <span id="cvcCard">000</span>
       </div>
 
     </div>
@@ -52,7 +55,7 @@
 
     <div class="number">       
         <label>CARD Number</label>
-        <input id="number" type="number" placeholder="e.g. 1234 5678 9123 0000" required max="16" min="16" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"> >
+        <input id="number" type="number" size ="16" placeholder="e.g. 1234 5678 9123 0000" required max="16" min="16" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"> 
     </div>
 
     <div class="card">
