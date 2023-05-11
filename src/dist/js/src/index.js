@@ -11,7 +11,7 @@ nameCard.addEventListener('input', () => {
 const number = document.getElementById("number");
 number.addEventListener('input', () => {
     const number = document.getElementById("number").value;
-    document.getElementById("cardNumber").innerText = number;
+    document.getElementById("cardNumber").innerText = number.replace(/(\d{4})?(\d{4})?(\d{4})?(\d{4})/, "$1 $2 $3 $4");
 });
 const months = document.getElementById("month");
 months.addEventListener('input', () => {

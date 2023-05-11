@@ -13,11 +13,11 @@ nameCard.addEventListener('input', () => {
     
 })
 
-const number = (<HTMLInputElement>document.getElementById("number"));
+const number = (<HTMLInputElement>document.getElementById("number"));  
 
     number.addEventListener('input', () => {
     const number = (<HTMLInputElement>document.getElementById("number")).value;    
-    (<HTMLInputElement>document.getElementById("cardNumber")).innerText = number;       
+    (<HTMLInputElement>document.getElementById("cardNumber")).innerText = number.replace(/(\d{4})?(\d{4})?(\d{4})?(\d{4})/, "$1 $2 $3 $4");       
     
 })
 
