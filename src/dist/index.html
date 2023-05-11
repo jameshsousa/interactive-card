@@ -49,32 +49,32 @@
     <div class="name">
       <form>
       <label>CARDHOLDER NAME</label>
-      <input id = "name-card" type="text" placeholder="e.g. Jane Appleseed" required max="45" min="5"> 
+      <input autocomplete="off"  id = "name-card" type="text" placeholder="e.g. Jane Appleseed" required maxlength="26" minlength="5"> 
       </form> 
     </div>
 
     <div class="number">       
         <label>CARD Number</label>
-        <input id="number" type="number" size ="16" placeholder="e.g. 1234 5678 9123 0000" required max="16" min="16" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"> 
+        <input autocomplete="off" id="number" type="text" size ="16" placeholder="e.g. 1234 5678 9123 0000" required maxlength="16" minlength="16" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}"> 
     </div>
 
     <div class="card">
       
           <div class="expire"> 
           <label>Exp. Date (MM/YY)</label>
-          <div class="month-year"><input  id ="month" type="number" placeholder="MM" required max="2" min="2"> <input required min="2" max="2" id="year" type="number" placeholder="YY"></div>
+          <div class="month-year"><input autocomplete="off"  id ="month" type="tex" placeholder="MM" required maxlength="2" minlength="2"> <input autocomplete="off" required minlength="2" maxlength="2" id="year" type="tex" placeholder="YY"></div>
           </div>
           
           
           <div class="cvc">
           <label>CVC</label>     
-          <input required max="3" min="3" id="cvc" type="number" placeholder="e.g. 123">
+          <input autocomplete="off" required maxlength="3" minlength="3" id="cvc" type="text" placeholder="e.g. 123">
           </div> 
 
     </div>
 
 
-    <input id="submit" type="submit" value="Confirm">
+    <input autocomplete="off" id="submit" type="submit" value="Confirm">
   
     </div>
 

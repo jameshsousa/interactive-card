@@ -69,9 +69,22 @@ body {
             color: $deepviletcolor;
             font-size: $primaryfontsize;
             padding-left: 4%;
+            opacity: 0.5;
 
             
         }
+        input, text {
+            color: $deepviletcolor;
+            font-size: $primaryfontsize;
+            padding-left: 4%;
+            font-family: $primaryfontfamily;
+            opacity: 1;            
+        }
+
+        input:focus {
+            border: solid #6348FE;
+        }
+        
 
         
 
@@ -136,6 +149,16 @@ body {
         color: $whitecolor;
         font-size: $primaryfontsize;
     }
+    input#submit:hover {
+        background-color: $whitecolor;
+        opacity: 1;
+        color: $deepviletcolor;
+        font-size: $primaryfontsize;
+        border: solid $deepviletcolor;
+    }
+
+    
+
 }
 
 .card-front {

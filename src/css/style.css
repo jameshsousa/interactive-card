@@ -65,11 +65,23 @@ body {
   color: #21092F;
   font-size: 18px;
   padding-left: 4%;
+  opacity: 0.5;
 }
 .white .form input::placeholder {
   color: #21092F;
   font-size: 18px;
   padding-left: 4%;
+  opacity: 0.5;
+}
+.white .form input, .white .form text {
+  color: #21092F;
+  font-size: 18px;
+  padding-left: 4%;
+  font-family: Space Grotesk;
+  opacity: 1;
+}
+.white .form input:focus {
+  border: solid #6348FE;
 }
 .white .form .number {
   width: 100%;
@@ -139,6 +151,13 @@ body {
   opacity: 1;
   color: #FFFFFF;
   font-size: 18px;
+}
+.white input#submit:hover {
+  background-color: #FFFFFF;
+  opacity: 1;
+  color: #21092F;
+  font-size: 18px;
+  border: solid #21092F;
 }
 
 .card-front {
