@@ -30,6 +30,12 @@ cvcs.addEventListener('input', () => {
 });
 const inputConfirm = document.getElementById("submit");
 inputConfirm.addEventListener("click", () => {
-    document.getElementsByClassName("return")[0].style.display = "block";
-    document.getElementsByClassName("form")[0].style.display = "none";
+    if (number.value == "1" && nameCard.value == "1" && months.value == "1" && years.value == "1" && cvcs.value == "1") {
+        document.querySelector("input").style.background = "red";
+        alert("número do cartão não preenchido");
+    }
+    else {
+        document.getElementsByClassName("return")[0].style.display = "block";
+        document.getElementsByClassName("form")[0].style.display = "none";
+    }
 });

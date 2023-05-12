@@ -94,7 +94,6 @@ body {
                 margin-bottom: 5%;
                 margin-top: 2%;
             }
-        
         }
 
         .name {            
@@ -157,18 +156,21 @@ body {
         border: solid $deepviletcolor;
     }
 
+    .return {        
+        width: 381px;
+        height: 291px;
+        @include flexCenter(center, column, center);
+        display: none;
+
+        :first-child {
+            font-size: $mediumfontsize;
+            color: $deepviletcolor;
+            letter-spacing: 3.42px;
+            font-family: $primaryfontfamily;
+        }
+    }
     
 
-}
-
-.return {
-    display: none;
-    :first-child {
-        font-size: $mediumfontsize;
-        color: $deepviletcolor;
-        letter-spacing: 3.42px;
-        font-family: $primaryfontfamily;
-    }
 }
 
 

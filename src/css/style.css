@@ -159,11 +159,16 @@ body {
   font-size: 18px;
   border: solid #21092F;
 }
-
-.return {
+.white .return {
+  width: 381px;
+  height: 291px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   display: none;
 }
-.return :first-child {
+.white .return :first-child {
   font-size: 28px;
   color: #21092F;
   letter-spacing: 3.42px;

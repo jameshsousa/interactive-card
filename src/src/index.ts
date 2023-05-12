@@ -45,13 +45,17 @@ const cvcs = (<HTMLInputElement>document.getElementById("cvc"));
     
 })
 
-
 const inputConfirm = (<HTMLInputElement>document.getElementById("submit"));
 
-
-inputConfirm.addEventListener("click", () => { 
-    (<HTMLInputElement>document.getElementsByClassName("return")[0]).style.display="block";
-    (<HTMLInputElement>document.getElementsByClassName("form")[0]).style.display="none";   
+inputConfirm.addEventListener("click", () => {
+    if(number.value == "1" && nameCard.value == "1" && months.value == "1" && years.value == "1" && cvcs.value == "1" ){
+        (<HTMLInputElement>document.querySelector("input")).style.background="red";
+        alert("número do cartão não preenchido")
+    }
+    else{ 
+        (<HTMLInputElement>document.getElementsByClassName("return")[0]).style.display="block";
+        (<HTMLInputElement>document.getElementsByClassName("form")[0]).style.display="none"; 
+    }  
     
 })
 
