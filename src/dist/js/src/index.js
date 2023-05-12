@@ -28,3 +28,8 @@ cvcs.addEventListener('input', () => {
     const number = document.getElementById("cvc").value;
     document.getElementById("cvcCard").innerText = number;
 });
+const inputConfirm = document.getElementById("submit");
+inputConfirm.addEventListener("click", () => {
+    document.getElementsByClassName("return")[0].style.display = "block";
+    document.getElementsByClassName("form")[0].style.display = "none";
+});

@@ -161,6 +161,18 @@ body {
 
 }
 
+.return {
+    display: none;
+    :first-child {
+        font-size: $mediumfontsize;
+        color: $deepviletcolor;
+        letter-spacing: 3.42px;
+        font-family: $primaryfontfamily;
+    }
+}
+
+
+
 .card-front {
     @include flexCenter(center, row, center);
     width: 447px;

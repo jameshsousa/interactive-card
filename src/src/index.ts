@@ -13,10 +13,10 @@ nameCard.addEventListener('input', () => {
     
 })
 
-const number = (<HTMLInputElement>document.getElementById("number"));  
+const number = (<HTMLInputElement>document.getElementById("number"));
 
     number.addEventListener('input', () => {
-    const number = (<HTMLInputElement>document.getElementById("number")).value;    
+    const number = (<HTMLInputElement>document.getElementById("number")).value;     
     (<HTMLInputElement>document.getElementById("cardNumber")).innerText = number.replace(/(\d{4})?(\d{4})?(\d{4})?(\d{4})/, "$1 $2 $3 $4");       
     
 })
@@ -42,6 +42,16 @@ const cvcs = (<HTMLInputElement>document.getElementById("cvc"));
     cvcs.addEventListener('input', () => {
     const number = (<HTMLInputElement>document.getElementById("cvc")).value;    
     (<HTMLInputElement>document.getElementById("cvcCard")).innerText = number;       
+    
+})
+
+
+const inputConfirm = (<HTMLInputElement>document.getElementById("submit"));
+
+
+inputConfirm.addEventListener("click", () => { 
+    (<HTMLInputElement>document.getElementsByClassName("return")[0]).style.display="block";
+    (<HTMLInputElement>document.getElementsByClassName("form")[0]).style.display="none";   
     
 })
 
