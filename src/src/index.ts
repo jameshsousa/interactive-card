@@ -45,11 +45,22 @@ const cvcs = (<HTMLInputElement>document.getElementById("cvc"));
     
 })
 
-const inputConfirm = (<HTMLInputElement>document.getElementById("submit"));
+const inputConfirm = (<HTMLInputElement>document.querySelector("#submit"));
 
-inputConfirm.addEventListener("click", () => {
+inputConfirm.addEventListener("click", (event) => {
+    event.preventDefault();
+    if(nameCard.value == ""){
+        (<HTMLInputElement>document.querySelectorAll("input")[0]).style.border="solid 3px #FF5050";
+        alert("por favor informe seu nome");
+        return;
+    }
     if(number.value == "1" && nameCard.value == "1" && months.value == "1" && years.value == "1" && cvcs.value == "1" ){
-        (<HTMLInputElement>document.querySelector("input")).style.background="red";
+        (<HTMLInputElement>document.querySelectorAll("input")[0]).style.background="blue";
+        (<HTMLInputElement>document.querySelectorAll("input")[1]).style.background="red";
+        (<HTMLInputElement>document.querySelectorAll("input")[2]).style.background="green";
+        (<HTMLInputElement>document.querySelectorAll("input")[3]).style.background="purple";
+        (<HTMLInputElement>document.querySelectorAll("input")[4]).style.background="white";
+        (<HTMLInputElement>document.querySelectorAll("input")[4]).style.border="red solid 3px";
         alert("número do cartão não preenchido")
     }
     else{ 

@@ -28,10 +28,25 @@ cvcs.addEventListener('input', () => {
     const number = document.getElementById("cvc").value;
     document.getElementById("cvcCard").innerText = number;
 });
-const inputConfirm = document.getElementById("submit");
-inputConfirm.addEventListener("click", () => {
+
+const nameblank = document.querySelector("#nameblank");
+
+
+const inputConfirm = document.querySelector("#submit");
+inputConfirm.addEventListener("click", (event) => {
+    event.preventDefault();
+    if (nameCard.value == "") {
+        document.querySelectorAll("input")[0].style.border = "solid 3px #FF5050";
+        nameblank.style.visibility = "visible";
+        return;
+    }
     if (number.value == "1" && nameCard.value == "1" && months.value == "1" && years.value == "1" && cvcs.value == "1") {
-        document.querySelector("input").style.background = "red";
+        document.querySelectorAll("input")[0].style.background = "blue";
+        document.querySelectorAll("input")[1].style.background = "red";
+        document.querySelectorAll("input")[2].style.background = "green";
+        document.querySelectorAll("input")[3].style.background = "purple";
+        document.querySelectorAll("input")[4].style.background = "white";
+        document.querySelectorAll("input")[4].style.border = "red solid 3px";
         alert("número do cartão não preenchido");
     }
     else {

@@ -41,6 +41,7 @@ body {
     background-color: $whitecolor;
     width: 65vw;
     height: 100vh;
+}
     
     
     .form {
@@ -83,10 +84,7 @@ body {
 
         input:focus {
             border: solid #6348FE;
-        }
-        
-
-        
+        } 
 
         .number {           
             width: 100%;
@@ -102,6 +100,14 @@ body {
                 margin-bottom: 5%;
                 margin-top: 2%;
             }
+
+            p {
+                font-size: 10px;
+                letter-spacing: 0;
+                color: $redcolor;
+                margin-top: -15px;
+                margin-bottom: 20px;
+                visibility: hidden;                
         }
 
         .card {
@@ -115,12 +121,16 @@ body {
 
             .expire {
                 @include flexCenter(center, column, start);
-                width: 100%;                             
+                input {
+                    width: 60%; 
+                }                                            
                                
                 .month-year {
                     @include flexCenter(center, row, end);
                     margin-top: -10%;
-                    width: 90%;
+                    input {
+                        width: 60%;
+                    }                    
                     gap: 10%;                    
                 }
                 input::placeholder {
@@ -129,8 +139,11 @@ body {
 
             }
             .cvc {
-                @include flexCenter(end, column, start);                
-                width: 100%; 
+                @include flexCenter(end, column, start);
+                input {
+                    width: 40%; 
+                }                
+                
                 input {
                     margin-top: -10%;                   
                     
@@ -168,12 +181,9 @@ body {
             letter-spacing: 3.42px;
             font-family: $primaryfontfamily;
         }
-    }
-    
+    }    
 
 }
-
-
 
 .card-front {
     @include flexCenter(center, row, center);
@@ -195,24 +205,23 @@ body {
     
 
     .card-number {
-        font-size: 28px;
-        color: #FFFFFF;
+        font-size: $mediumfontsize;
+        color: $whitecolor;
         letter-spacing: .2rem;
         width: 100%;        
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: $primaryfontfamily;
      
     }
 
     .card-name {
         @include flexCenter(space-between, row, center);
-        font-size: 14px;
-        color: #FFFFFF; 
+        font-size: $cardfontsize;
+        color: $whitecolor; 
         width: 100%;               
         letter-spacing: .2rem;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: $primaryfontfamily;
         text-transform: uppercase;
     }
-
 
 }
 
@@ -228,10 +237,10 @@ body {
         position:absolute;
         top: 67%;
         right: 58%;
-        font-family: 'Space Grotesk', sans-serif;
+        font-family: $primaryfontfamily;
         letter-spacing: .2rem;
-        color: #FFFFFF;
-        font-size: 14px; 
+        color: $whitecolor;
+        font-size: $cardfontsize; 
     }
     
 }

@@ -38,7 +38,8 @@ body {
   width: 65vw;
   height: 100vh;
 }
-.white .form {
+
+.form {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -51,53 +52,61 @@ body {
   text-transform: uppercase;
   font-weight: bold;
 }
-.white .form label {
+.form label {
   height: 5vh;
 }
-.white .form input {
+.form input {
   width: 100%;
   height: 5vh;
   border-radius: 10px;
   border: 0.1px solid rgba(33, 9, 47, 0.2);
   opacity: 0.1;
 }
-.white .form input::-moz-placeholder {
+.form input::-moz-placeholder {
   color: #21092F;
   font-size: 18px;
   padding-left: 4%;
   opacity: 0.5;
 }
-.white .form input::placeholder {
+.form input::placeholder {
   color: #21092F;
   font-size: 18px;
   padding-left: 4%;
   opacity: 0.5;
 }
-.white .form input, .white .form text {
+.form input, .form text {
   color: #21092F;
   font-size: 18px;
   padding-left: 4%;
   font-family: Space Grotesk;
   opacity: 1;
 }
-.white .form input:focus {
+.form input:focus {
   border: solid #6348FE;
 }
-.white .form .number {
+.form .number {
   width: 100%;
 }
-.white .form .number input {
+.form .number input {
   margin-bottom: 5%;
   margin-top: 2%;
 }
-.white .form .name {
+.form .name {
   width: 100%;
 }
-.white .form .name input {
+.form .name input {
   margin-bottom: 5%;
   margin-top: 2%;
 }
-.white .form .card {
+.form .name p {
+  font-size: 10px;
+  letter-spacing: 0;
+  color: #FF5050;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  visibility: hidden;
+}
+.form .name .card {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -105,61 +114,67 @@ body {
   margin-bottom: 5%;
   width: 100%;
 }
-.white .form .card input {
+.form .name .card input {
   width: 100%;
 }
-.white .form .card .expire {
+.form .name .card .expire {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
-  width: 100%;
 }
-.white .form .card .expire .month-year {
+.form .name .card .expire input {
+  width: 60%;
+}
+.form .name .card .expire .month-year {
   display: flex;
   justify-content: center;
   align-items: end;
   flex-direction: row;
   margin-top: -10%;
-  width: 90%;
   gap: 10%;
 }
-.white .form .card .expire input::-moz-placeholder {
+.form .name .card .expire .month-year input {
+  width: 60%;
+}
+.form .name .card .expire input::-moz-placeholder {
   padding-left: 20%;
 }
-.white .form .card .expire input::placeholder {
+.form .name .card .expire input::placeholder {
   padding-left: 20%;
 }
-.white .form .card .cvc {
+.form .name .card .cvc {
   display: flex;
   justify-content: end;
   align-items: start;
   flex-direction: column;
-  width: 100%;
 }
-.white .form .card .cvc input {
+.form .name .card .cvc input {
+  width: 40%;
+}
+.form .name .card .cvc input {
   margin-top: -10%;
 }
-.white .form .card .cvc input::-moz-placeholder {
+.form .name .card .cvc input::-moz-placeholder {
   padding-left: 20%;
 }
-.white .form .card .cvc input::placeholder {
+.form .name .card .cvc input::placeholder {
   padding-left: 20%;
 }
-.white input#submit {
+.form input#submit {
   background-color: #21092F;
   opacity: 1;
   color: #FFFFFF;
   font-size: 18px;
 }
-.white input#submit:hover {
+.form input#submit:hover {
   background-color: #FFFFFF;
   opacity: 1;
   color: #21092F;
   font-size: 18px;
   border: solid #21092F;
 }
-.white .return {
+.form .return {
   width: 381px;
   height: 291px;
   display: flex;
@@ -168,7 +183,7 @@ body {
   flex-direction: column;
   display: none;
 }
-.white .return :first-child {
+.form .return :first-child {
   font-size: 28px;
   color: #21092F;
   letter-spacing: 3.42px;
@@ -203,7 +218,7 @@ body {
   color: #FFFFFF;
   letter-spacing: 0.2rem;
   width: 100%;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: Space Grotesk;
 }
 .front-content .card-name {
   display: flex;
@@ -214,7 +229,7 @@ body {
   color: #FFFFFF;
   width: 100%;
   letter-spacing: 0.2rem;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: Space Grotesk;
   text-transform: uppercase;
 }
 
@@ -233,7 +248,7 @@ body {
   position: absolute;
   top: 67%;
   right: 58%;
-  font-family: "Space Grotesk", sans-serif;
+  font-family: Space Grotesk;
   letter-spacing: 0.2rem;
   color: #FFFFFF;
   font-size: 14px;
