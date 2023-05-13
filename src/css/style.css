@@ -106,59 +106,57 @@ body {
   margin-bottom: 20px;
   visibility: hidden;
 }
-.form .name .card {
+.form .card {
   display: flex;
   justify-content: start;
   align-items: center;
   flex-direction: row;
   margin-bottom: 5%;
   width: 100%;
+  gap: 5%;
 }
-.form .name .card input {
-  width: 100%;
-}
-.form .name .card .expire {
+.form .card .expire {
   display: flex;
   justify-content: center;
   align-items: start;
   flex-direction: column;
 }
-.form .name .card .expire input {
-  width: 60%;
+.form .card .expire input {
+  width: 100%;
 }
-.form .name .card .expire .month-year {
+.form .card .expire .month-year {
   display: flex;
   justify-content: center;
   align-items: end;
   flex-direction: row;
   margin-top: -10%;
-  gap: 10%;
+  gap: 5%;
 }
-.form .name .card .expire .month-year input {
-  width: 60%;
+.form .card .expire .month-year input {
+  width: 50%;
 }
-.form .name .card .expire input::-moz-placeholder {
+.form .card .expire input::-moz-placeholder {
   padding-left: 20%;
 }
-.form .name .card .expire input::placeholder {
+.form .card .expire input::placeholder {
   padding-left: 20%;
 }
-.form .name .card .cvc {
+.form .card .cvc {
   display: flex;
   justify-content: end;
   align-items: start;
   flex-direction: column;
 }
-.form .name .card .cvc input {
-  width: 40%;
+.form .card .cvc input {
+  width: 100%;
 }
-.form .name .card .cvc input {
-  margin-top: -10%;
+.form .card .cvc input {
+  margin-top: -20%;
 }
-.form .name .card .cvc input::-moz-placeholder {
+.form .card .cvc input::-moz-placeholder {
   padding-left: 20%;
 }
-.form .name .card .cvc input::placeholder {
+.form .card .cvc input::placeholder {
   padding-left: 20%;
 }
 .form input#submit {
@@ -174,20 +172,39 @@ body {
   font-size: 18px;
   border: solid #21092F;
 }
-.form .return {
-  width: 381px;
-  height: 291px;
+
+.return {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  display: none;
+  width: 381px;
+  height: 291px;
+  visibility: hidden;
 }
-.form .return :first-child {
+.return p:nth-child(2) {
   font-size: 28px;
   color: #21092F;
   letter-spacing: 3.42px;
   font-family: Space Grotesk;
+  text-transform: uppercase;
+  margin-bottom: -10%;
+}
+.return p:nth-child(3) {
+  color: #8F8694;
+  font-size: 18px;
+  font-family: Space Grotesk;
+}
+.return button {
+  width: 100%;
+  height: 20%;
+  border-radius: 7px;
+  background-color: #21092F;
+  color: #FFFFFF;
+  color: #FFFFFF;
+  font-size: Space Grotesk;
+  letter-spacing: 3.42px;
+  font-weight: bold;
 }
 
 .card-front {

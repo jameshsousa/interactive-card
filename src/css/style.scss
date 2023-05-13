@@ -108,30 +108,29 @@ body {
                 margin-top: -15px;
                 margin-bottom: 20px;
                 visibility: hidden;                
+            }
         }
 
         .card {
+
             @include flexCenter(start, row, center);
             margin-bottom: 5%;
-            width: 100%;                                      
-
-            input {                
-                width: 100%;                
-            }
-
+            width: 100%;
+            gap: 5%;
+        
             .expire {
                 @include flexCenter(center, column, start);
                 input {
-                    width: 60%; 
+                    width: 100%; 
                 }                                            
                                
                 .month-year {
                     @include flexCenter(center, row, end);
                     margin-top: -10%;
                     input {
-                        width: 60%;
+                        width: 50%;
                     }                    
-                    gap: 10%;                    
+                    gap: 5%;                    
                 }
                 input::placeholder {
                     padding-left: 20%;
@@ -141,11 +140,11 @@ body {
             .cvc {
                 @include flexCenter(end, column, start);
                 input {
-                    width: 40%; 
+                    width: 100%; 
                 }                
                 
                 input {
-                    margin-top: -10%;                   
+                    margin-top: -20%;                   
                     
                 }
                 input::placeholder {
@@ -153,7 +152,7 @@ body {
                 }
                            
             } 
-        }        
+              
     }
     input#submit {
         background-color: $deepviletcolor;
@@ -169,21 +168,44 @@ body {
         border: solid $deepviletcolor;
     }
 
-    .return {        
-        width: 381px;
-        height: 291px;
-        @include flexCenter(center, column, center);
-        display: none;
-
-        :first-child {
-            font-size: $mediumfontsize;
-            color: $deepviletcolor;
-            letter-spacing: 3.42px;
-            font-family: $primaryfontfamily;
-        }
-    }    
-
 }
+
+.return { 
+
+    @include flexCenter(space-between, column, center);      
+    width: 381px;
+    height: 291px;    
+    visibility: hidden; 
+    
+
+    p:nth-child(2) {        
+        font-size: $mediumfontsize;
+        color: $deepviletcolor;
+        letter-spacing: 3.42px;
+        font-family: $primaryfontfamily;
+        text-transform: uppercase;
+        margin-bottom: -10%;        
+    }
+
+    p:nth-child(3){        
+        color: $lightpurple;
+        font-size: $primaryfontsize;
+        font-family: $primaryfontfamily;
+
+    }
+
+    button {
+        width: 100%;
+        height: 20%;
+        border-radius: 7px;
+        background-color: $deepviletcolor;
+        color: $whitecolor;
+        color: $whitecolor;
+        font-size: $primaryfontfamily;
+        letter-spacing: 3.42px;
+        font-weight: bold;
+    }
+}  
 
 .card-front {
     @include flexCenter(center, row, center);

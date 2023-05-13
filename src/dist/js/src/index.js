@@ -28,16 +28,27 @@ cvcs.addEventListener('input', () => {
     const number = document.getElementById("cvc").value;
     document.getElementById("cvcCard").innerText = number;
 });
-
-const nameblank = document.querySelector("#nameblank");
-
-
 const inputConfirm = document.querySelector("#submit");
 inputConfirm.addEventListener("click", (event) => {
     event.preventDefault();
     if (nameCard.value == "") {
         document.querySelectorAll("input")[0].style.border = "solid 3px #FF5050";
-        nameblank.style.visibility = "visible";
+        return;
+    }
+    else if (number.value == "") {
+        document.querySelectorAll("input")[1].style.border = "solid 3px #FF5050";
+        return;
+    }
+    else if (months.value == "") {
+        document.querySelectorAll("input")[2].style.border = "solid 3px #FF5050";
+        return;
+    }
+    else if (years.value == "") {
+        document.querySelectorAll("input")[3].style.border = "solid 3px #FF5050";
+        return;
+    }
+    else if (cvcs.value == "") {
+        document.querySelectorAll("input")[4].style.border = "solid 3px #FF5050";
         return;
     }
     if (number.value == "1" && nameCard.value == "1" && months.value == "1" && years.value == "1" && cvcs.value == "1") {
@@ -50,7 +61,7 @@ inputConfirm.addEventListener("click", (event) => {
         alert("número do cartão não preenchido");
     }
     else {
-        document.getElementsByClassName("return")[0].style.display = "block";
+        document.getElementsByClassName("return")[0].style.visibility = "visible";
         document.getElementsByClassName("form")[0].style.display = "none";
     }
 });

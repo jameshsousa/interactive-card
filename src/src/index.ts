@@ -50,8 +50,24 @@ const inputConfirm = (<HTMLInputElement>document.querySelector("#submit"));
 inputConfirm.addEventListener("click", (event) => {
     event.preventDefault();
     if(nameCard.value == ""){
-        (<HTMLInputElement>document.querySelectorAll("input")[0]).style.border="solid 3px #FF5050";
-        alert("por favor informe seu nome");
+        (<HTMLInputElement>document.querySelectorAll("input")[0]).style.border="solid 3px #FF5050";        
+        return;
+    }
+    else if (number.value == ""){
+        (<HTMLInputElement>document.querySelectorAll("input")[1]).style.border="solid 3px #FF5050";
+        return;
+
+    }
+    else if (months.value == ""){
+        (<HTMLInputElement>document.querySelectorAll("input")[2]).style.border="solid 3px #FF5050";
+        return;
+    }
+    else if (years.value == ""){
+        (<HTMLInputElement>document.querySelectorAll("input")[3]).style.border="solid 3px #FF5050";
+        return;
+    }
+    else if (cvcs.value == ""){
+        (<HTMLInputElement>document.querySelectorAll("input")[4]).style.border="solid 3px #FF5050";
         return;
     }
     if(number.value == "1" && nameCard.value == "1" && months.value == "1" && years.value == "1" && cvcs.value == "1" ){
@@ -64,7 +80,7 @@ inputConfirm.addEventListener("click", (event) => {
         alert("número do cartão não preenchido")
     }
     else{ 
-        (<HTMLInputElement>document.getElementsByClassName("return")[0]).style.display="block";
+        (<HTMLInputElement>document.getElementsByClassName("return")[0]).style.visibility="visible";
         (<HTMLInputElement>document.getElementsByClassName("form")[0]).style.display="none"; 
     }  
     
