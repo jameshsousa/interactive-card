@@ -91,6 +91,15 @@ body {
   margin-bottom: 5%;
   margin-top: 2%;
 }
+.form .number p {
+  font-size: 10px;
+  letter-spacing: 0;
+  color: #FF5050;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  visibility: hidden;
+  text-transform: capitalize;
+}
 .form .name {
   width: 100%;
 }
@@ -105,6 +114,7 @@ body {
   margin-top: -15px;
   margin-bottom: 20px;
   visibility: hidden;
+  text-transform: capitalize;
 }
 .form .card {
   display: flex;
@@ -158,6 +168,15 @@ body {
 }
 .form .card .cvc input::placeholder {
   padding-left: 20%;
+}
+.form .card .cvc p {
+  font-size: 10px;
+  letter-spacing: 0;
+  color: #FF5050;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  visibility: hidden;
+  text-transform: capitalize;
 }
 .form input#submit {
   background-color: #21092F;

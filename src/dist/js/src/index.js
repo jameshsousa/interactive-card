@@ -28,15 +28,27 @@ cvcs.addEventListener('input', () => {
     const number = document.getElementById("cvc").value;
     document.getElementById("cvcCard").innerText = number;
 });
+function isNumberCard(numbercard) {
+    const numberRegex = new RegExp(/(\d{4})?(\d{4})?(\d{4})?(\d{4})/, "$1 $2 $3 $4");
+    if (numberRegex.test(numbercard)) {
+        return true;
+    }
+    return false;
+}
 const inputConfirm = document.querySelector("#submit");
 inputConfirm.addEventListener("click", (event) => {
     event.preventDefault();
     if (nameCard.value == "") {
         document.querySelectorAll("input")[0].style.border = "solid 3px #FF5050";
+        document.querySelector("#nameblank").style.visibility = "visible";
         return;
+    }
+    else if (isNumberCard(number.value)) {
+        alert("não é um número válido");
     }
     else if (number.value == "") {
         document.querySelectorAll("input")[1].style.border = "solid 3px #FF5050";
+        document.querySelector("#numberblank").style.visibility = "visible";
         return;
     }
     else if (months.value == "") {
@@ -49,16 +61,8 @@ inputConfirm.addEventListener("click", (event) => {
     }
     else if (cvcs.value == "") {
         document.querySelectorAll("input")[4].style.border = "solid 3px #FF5050";
+        document.querySelector("#cvcblank").style.visibility = "visible";
         return;
-    }
-    if (number.value == "1" && nameCard.value == "1" && months.value == "1" && years.value == "1" && cvcs.value == "1") {
-        document.querySelectorAll("input")[0].style.background = "blue";
-        document.querySelectorAll("input")[1].style.background = "red";
-        document.querySelectorAll("input")[2].style.background = "green";
-        document.querySelectorAll("input")[3].style.background = "purple";
-        document.querySelectorAll("input")[4].style.background = "white";
-        document.querySelectorAll("input")[4].style.border = "red solid 3px";
-        alert("número do cartão não preenchido");
     }
     else {
         document.getElementsByClassName("return")[0].style.visibility = "visible";

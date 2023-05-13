@@ -57,6 +57,7 @@
     <div class="number">       
         <label>CARD Number</label>
         <input autocomplete="off" id="number" type="text" size ="16" placeholder="e.g. 1234 5678 9123 0000" required maxlength="16" minlength="16">
+        <p id="numberblank">Can't be blank</p>
     </div>
 
     <div class="card">
@@ -64,12 +65,14 @@
           <div class="expire"> 
           <label>Exp. Date (MM/YY)</label>
           <div class="month-year"><input autocomplete="off"  id ="month" type="tex" placeholder="MM" required maxlength="2" minlength="2"> <input autocomplete="off" required minlength="2" maxlength="2" id="year" type="tex" placeholder="YY"></div>
+          
           </div>
           
           
           <div class="cvc">
           <label>CVC</label>     
           <input autocomplete="off" required maxlength="3" minlength="3" id="cvc" type="text" placeholder="e.g. 123">
+          <p id="cvcblank">Can't be blank</p>
           </div> 
 
     </div>

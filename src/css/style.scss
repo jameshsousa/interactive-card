@@ -92,6 +92,16 @@ body {
                 margin-bottom: 5%;
                 margin-top: 2%;
             }
+            p {
+                font-size: 10px;
+                letter-spacing: 0;
+                color: $redcolor;
+                margin-top: -15px;
+                margin-bottom: 20px;
+                visibility: hidden;
+                text-transform: capitalize;
+                               
+            }
         }
 
         .name {            
@@ -107,7 +117,8 @@ body {
                 color: $redcolor;
                 margin-top: -15px;
                 margin-bottom: 20px;
-                visibility: hidden;                
+                visibility: hidden; 
+                text-transform: capitalize;               
             }
         }
 
@@ -149,6 +160,16 @@ body {
                 }
                 input::placeholder {
                     padding-left: 20%;
+                }
+
+                p {
+                    font-size: 10px;
+                    letter-spacing: 0;
+                    color: $redcolor;
+                    margin-top: -15px;
+                    margin-bottom: 20px;
+                    visibility: hidden; 
+                    text-transform: capitalize;               
                 }
                            
             } 
